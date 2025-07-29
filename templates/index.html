@@ -1,19 +1,8 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <title>La Mia WebApp</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/static/style.css" rel="stylesheet">
-</head>
-<body class="container mt-5">
-  <h1 class="mb-4">Benvenuto nella tua WebApp</h1>
-  <form method="POST">
-    <input type="text" name="input" class="form-control mb-3" placeholder="Scrivi qualcosa...">
-    <button type="submit" class="btn btn-primary">Invia</button>
-  </form>
-  {% if message %}
-    <div class="alert alert-success mt-3">Hai scritto: {{ message }}</div>
-  {% endif %}
+<html>
+<head><title>Home</title></head>
+<body>
+  <h1>Benvenuto, {{ username }}!</h1>
+  <a href="{{ url_for('logout') }}">Logout</a>
 </body>
 </html>
