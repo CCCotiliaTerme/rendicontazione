@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     message = ""
     if request.method == "POST":
-        message = request.form.get("input", "")
+        message = request.form["input"]
     return render_template("index.html", message=message)
 
 if __name__ == "__main__":
